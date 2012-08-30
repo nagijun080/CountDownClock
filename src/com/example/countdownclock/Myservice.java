@@ -85,6 +85,9 @@ public class Myservice extends Service {
 		//ˆê‚ÌˆÊ‚Ì•ª”‚ğminUnitDigit‚É•\¦
 		remoteViews.setTextViewText(R.id.minUnitDigit, minUDSt);
 		
+		remoteViews.setTextViewText(R.id.textAnniversary, getText(R.string.release_first));
+		//Log.d("textAnniversary",getText(R.string.release_first).toString());
+		
 		
 		//\‚ÌˆÊ‚Ì•b”‚ğimageView2‚É•\¦
 		/*remoteViews.setImageViewResource(R.id.secTenthsDigit, numImage[secTD]);
