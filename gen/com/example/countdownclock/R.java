@@ -18,15 +18,19 @@ public final class R {
     public static final class drawable {
         public static final int ic_action_search=0x7f020000;
         public static final int ic_launcher=0x7f020001;
+        public static final int mini_hd=0x7f020002;
     }
     public static final class id {
+        public static final int AnniDay=0x7f090009;
+        public static final int StDay=0x7f09000a;
+        public static final int colon=0x7f090005;
         public static final int day=0x7f090001;
         public static final int hrTenthsDigit=0x7f090003;
         public static final int hrUnitDigit=0x7f090004;
-        public static final int menu_settings=0x7f090008;
-        public static final int minTenthsDigit=0x7f090005;
-        public static final int minUnitDigit=0x7f090006;
-        public static final int textAnniversary=0x7f090007;
+        public static final int menu_settings=0x7f09000b;
+        public static final int minTenthsDigit=0x7f090006;
+        public static final int minUnitDigit=0x7f090007;
+        public static final int textAnniversary=0x7f090008;
         public static final int week=0x7f090002;
         public static final int year=0x7f090000;
     }

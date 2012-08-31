@@ -14,24 +14,13 @@ public class CountDownClock extends AppWidgetProvider {
 	
 	private static final String ACTION_START_MY_ALARM =
 			"com.example.android.appwidget.countdownclock.ACTION_START_MY_ALARM";
-	private final long interval = 60 * 1000;
-
-	@Override
-	public void onDeleted(Context context, int[] appWidgetIds) {
-		// TODO 自動生成されたメソッド・スタブ
-		super.onDeleted(context, appWidgetIds);
-	}
-
-	@Override
-	public void onDisabled(Context context) {
-		// TODO 自動生成されたメソッド・スタブ
-		super.onDisabled(context);
-	}
+	private final long interval = 1000;
 
 	@Override
 	public void onEnabled(Context context) {
 		// TODO 自動生成されたメソッド・スタブ
 		super.onEnabled(context);
+		setAlarm(context);
 	}
 
 	@Override
@@ -52,7 +41,7 @@ public class CountDownClock extends AppWidgetProvider {
 	public void onUpdate(Context context, AppWidgetManager appWidgetManager,
 			int[] appWidgetIds) {
 		// TODO 自動生成されたメソッド・スタブ
-			//Log.d("update","Updateの中");
+			Log.d("update","Updateの中");
 			setAlarm(context);
 		}
 	
