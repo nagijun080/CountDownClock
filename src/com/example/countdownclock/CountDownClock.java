@@ -7,7 +7,11 @@ import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.util.Log;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.RemoteViews;
 
 public class CountDownClock extends AppWidgetProvider {
 	
@@ -15,7 +19,7 @@ public class CountDownClock extends AppWidgetProvider {
 	private static final String ACTION_START_MY_ALARM =
 			"com.example.android.appwidget.countdownclock.ACTION_START_MY_ALARM";
 	private final long interval = 1000;
-
+	
 	@Override
 	public void onEnabled(Context context) {
 		// TODO 自動生成されたメソッド・スタブ
@@ -42,6 +46,14 @@ public class CountDownClock extends AppWidgetProvider {
 			int[] appWidgetIds) {
 		// TODO 自動生成されたメソッド・スタブ
 			Log.d("update","Updateの中");
+			RemoteViews remoteViews = new RemoteViews(context.getPackageName(),R.layout.widget_main);
+			
+			Intent webIntent = new Intent(Intent.ACTION_VIEW);
+			webIntent.setData(Uri.parse("http://ryu-ga-gotoku.com/hd_edition/"));
+			PendingIntent webPending = PendingIntent.getActivity(context, 0, webIntent, 0);
+			remoteViews.setOnClickPendingIntent(R.id.getUrl, webPending);
+			
+			appWidgetManager.updateAppWidget(appWidgetIds, remoteViews);
 			setAlarm(context);
 		}
 	
@@ -54,4 +66,6 @@ public class CountDownClock extends AppWidgetProvider {
 		long oneSecondAfter = now + interval - now % (interval);
 		am.set(AlarmManager.RTC, oneSecondAfter, operation);
 	}
+	
+
 }

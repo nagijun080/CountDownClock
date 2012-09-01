@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/mini_hd"
     android:orientation="vertical"
+    android:id="@+id/getUrl"
     tools:context=".MainActivity" >
     
      <LinearLayout
