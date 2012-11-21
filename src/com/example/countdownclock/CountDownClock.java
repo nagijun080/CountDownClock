@@ -49,7 +49,7 @@ public class CountDownClock extends AppWidgetProvider {
 			RemoteViews remoteViews = new RemoteViews(context.getPackageName(),R.layout.widget_main);
 			
 			Intent webIntent = new Intent(Intent.ACTION_VIEW);
-			webIntent.setData(Uri.parse("http://ryu-ga-gotoku.com/hd_edition/"));
+			webIntent.setData(Uri.parse("http://loco.yahoo.co.jp/fukuoka/event/?date=20130101"));
 			PendingIntent webPending = PendingIntent.getActivity(context, 0, webIntent, 0);
 			remoteViews.setOnClickPendingIntent(R.id.getUrl, webPending);
 			

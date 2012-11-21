@@ -29,7 +29,7 @@ public class Myservice extends Service {
 		Calendar calendar = Calendar.getInstance();
 		Calendar countDown = Calendar.getInstance();
 		
-		countDown.set(2012, Calendar.NOVEMBER, 1);
+		countDown.set(2012, Calendar.DECEMBER, 31);
 		//今年の始めから１１月１日までの日数
 		Integer releaseDay = countDown.get(Calendar.DAY_OF_YEAR);
 		//今年の始めから現在までの日数
